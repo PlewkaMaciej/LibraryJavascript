@@ -19,7 +19,7 @@ export const singleArticle = (value) => {
     summary.classList.add("summary-paragraph");
     publishedAt.classList.add("classic-paragraph");
     title.classList.add("classic-paragraph");
-    newsSite.classList.add("classic-paragraph");
+    newsSite.classList.add("newSite-paragraph");
     container.appendChild(singleArticleContainer)
     singleArticleContainer.appendChild(title)
     singleArticleContainer.appendChild(publishedAt)

@@ -2,6 +2,7 @@
 // while(div.firstChild){
 //     div.removeChild(div.firstChild);
 // }
+
   import { fetchingData} from "./fetchingData.js";
   import {fetchingSingleData} from "./fetchingData.js"
   let pageNumber=15
@@ -21,4 +22,4 @@
       }
     };
   
-  
+    

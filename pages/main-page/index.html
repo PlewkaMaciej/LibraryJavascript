@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
     <div class="main-container">
         <div class="articles-container">
+            
             <div class="label-input-for-fetching-x-articles-container">
-            <label class="fetched-x-articles-label" for="fetched-x-articles"> Define the value of the displayed articles below</label>
-            <div class="input-button-container">
-            <input class="fetched-x-articles-input" type="number" id="fetched-x-articles" name="fetched-x-articles" required
-                   minlength="5" maxlength="8" size="4"> </div>
+                <label class="fetched-x-articles-label" for="fetched-x-articles"> Define the value of the displayed
+                    articles below</label>
+                <div class="input-button-container">
+                    <input class="fetched-x-articles-input" type="number" id="fetched-x-articles"
+                        name="fetched-x-articles" required minlength="5" maxlength="8" size="4">
                 </div>
+                <div class="container-for-sort-buttons">
+                    <button class="classic-button">Sort articles by title</button>
+                    <button class="classic-button">Sort articles by published date</button>
+                </div>
+            </div>
         </div>
     </div>
     <script type="module" src="main-page.js"></script>
 </body>
+
 </html>

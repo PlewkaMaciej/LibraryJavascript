@@ -5,10 +5,13 @@ export const singleArticle = (value) => {
     let summary = document.createElement("p");
     let publishedAt = document.createElement("p");
     let newsSite = document.createElement("a");
+    let addToLibraryButton = document.createElement("button");
+    addToLibraryButton.innerText ="Add to library"
+    addToLibraryButton.classList.add("classic-button")
     title.innerHTML = "Title: " + value.title
     newsSite.innerHTML = "Go to news Site " + value.newsSite
     newsSite.href = value.url
-    if(value.summary.length>0){
+    if (value.summary.length > 0) {
         summary.innerHTML = "Summary: " + value.summary.substring(0, 200)
     }
     publishedAt.innerHTML = "Published: " + value.publishedAt.substring(0, 10)
@@ -22,4 +25,5 @@ export const singleArticle = (value) => {
     singleArticleContainer.appendChild(publishedAt)
     singleArticleContainer.appendChild(summary)
     singleArticleContainer.appendChild(newsSite)
+    singleArticleContainer.appendChild(addToLibraryButton)
 }

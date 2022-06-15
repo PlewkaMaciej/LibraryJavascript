@@ -1,10 +1,10 @@
-import { singleArticle } from "./singleArticle.js";
+import { singleArticle } from "../singleArticle.js";
+let articles = null
  export const fetchingData= (pageNumbers)=> {
-    let articles = null
-    fetch("https://api.spaceflightnewsapi.net/v3/articles?_limit="+pageNumbers)
+    
+    fetch("https://api.spaceflightnewsapi.net/v3/articles?_limit=15")
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             articles = data;
             articles.forEach((value) => {
               singleArticle(value)

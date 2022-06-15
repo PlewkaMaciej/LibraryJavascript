@@ -1,4 +1,4 @@
-import { singleArticle } from "../singleArticle.js";
+import { singleArticle } from "../components/singleArticle.js";
 let articles = null
  export const fetchingDataSortedByDate= (pageNumbers)=> {
     

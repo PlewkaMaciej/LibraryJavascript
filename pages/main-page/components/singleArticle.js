@@ -1,6 +1,11 @@
+
+import { addToLibary } from "./addToLibrary.js";
 const container = document.querySelector(".container-for-all-article");
 
 export const singleArticle = (singleArticle) => {
+    let items = { ...window.localStorage };
+
+
     let singleArticleContainer = document.createElement("div");
     let title = document.createElement("p");
     let summary = document.createElement("p");
@@ -18,17 +23,36 @@ export const singleArticle = (singleArticle) => {
 
     addToLibraryButton.classList.add("classic-button")
     singleArticleContainer.classList.add("single-article-container");
-    addToLibraryButton.innerText ="Add to library"
+    addToLibraryButton.innerText = "Add to library"
     summary.classList.add("summary-paragraph");
     publishedAt.classList.add("classic-paragraph");
     title.classList.add("classic-paragraph");
     newsSite.classList.add("newSite-paragraph");
-    
+    let isInLibrary = false
+    Object.values(items).forEach((item) => {
+        if (JSON.parse(item).id === singleArticle.id) {
+            isInLibrary = true
+        }
+    })
+    if(isInLibrary){
+        addToLibraryButton.name="isInLibrary"
+        addToLibraryButton.innerText="delete"
+    }
+    else{
+        addToLibraryButton.name="isntInLibrary"
+        addToLibraryButton.innerText="add"
+
+    }
+
+    addToLibraryButton.id = singleArticle.id
+
     container.appendChild(singleArticleContainer)
     singleArticleContainer.appendChild(title)
     singleArticleContainer.appendChild(publishedAt)
     singleArticleContainer.appendChild(summary)
     singleArticleContainer.appendChild(newsSite)
     singleArticleContainer.appendChild(addToLibraryButton)
+    addToLibraryButton.addEventListener("click", addToLibary)
 }
+
 

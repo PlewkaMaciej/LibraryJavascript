@@ -1,10 +1,10 @@
-import { fetchingSingleData } from "./API/fetchingData.js"
-import { fetchingSingleDataSortedByDate } from "./API/fetchingDataSortedByDate.js";
-import { fetchingSingleDataSortedByTitle } from "./API/fetchingDataSortedByTitle.js";
-import { isSorted,isSortedByTitle,pageNumber,modifyPageNumber} from "./main-page.js";
-import { fetchingCountData } from "./API/fetchingCountOfArticles.js";
-import { countNumber,modifyCountNumber} from "./sort/sortByTitle.js";
-import { countNumber2,modifyCountNumber2 } from "./sort/sortByDate.js";
+import { fetchingSingleData } from "../API/fetchingData.js"
+import { fetchingSingleDataSortedByDate } from "../API/fetchingDataSortedByDate.js";
+import { fetchingSingleDataSortedByTitle } from "../API/fetchingDataSortedByTitle.js";
+import { isSorted,isSortedByTitle,pageNumber,modifyPageNumber} from "../main-page.js";
+import { fetchingCountData } from "../API/fetchingCountOfArticles.js";
+import { countNumber,modifyCountNumber} from "../sort/sortByTitle.js";
+import { countNumber2,modifyCountNumber2 } from "../sort/sortByDate.js";
 export function pagination() {
   if (
     window.scrollY + window.innerHeight >=

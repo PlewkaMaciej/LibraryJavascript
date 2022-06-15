@@ -2,7 +2,9 @@
 // while(div.firstChild){
 //     div.removeChild(div.firstChild);
 // }
-
+const container = document.querySelector(".container-for-all-article");
+const xArticlesToFetchInput = document.querySelector(".fetched-x-articles-input")
+const searchXArticlesButton = document.querySelector("#search-button")
   import { fetchingData} from "./fetchingData.js";
   import {fetchingSingleData} from "./fetchingData.js"
   let pageNumber=15
@@ -21,5 +23,12 @@
           fetchingSingleData(pageNumber)
       }
     };
-  
-    
+  const searchXArticles = ()=>{
+    while (container.firstChild) {
+      container.removeChild(container.lastChild);
+    }
+    pageNumber=xArticlesToFetchInput.value
+    fetchingData(pageNumber)
+    xArticlesToFetchInput.value=null
+  }
+    searchXArticlesButton.addEventListener("click", searchXArticles);

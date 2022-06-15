@@ -1,5 +1,7 @@
-const container = document.querySelector(".articles-container");
+const container = document.querySelector(".container-for-all-article");
+
 export const singleArticle = (value) => {
+    // singleArticle.parentNode.removeChild(singleArticle)
     let singleArticleContainer = document.createElement("div");
     let title = document.createElement("p");
     let summary = document.createElement("p");

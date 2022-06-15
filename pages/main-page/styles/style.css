@@ -16,20 +16,20 @@
     border: 1px solid rgba(27, 31, 35, 0.15);
     overflow: hidden;
     border-radius: 4px;
-    min-width: 600px;
+    width: 600px;
 }
 .main-container{
     display: flex;
     justify-content: center;
     width: 100%;
     background-color: #DAE0E6;
-    background-size:cover;
+    min-height: 100vh;
 }
 .articles-container{
     display: flex;
     flex-direction: column;
-    width: 30%;
     align-items: center;
+    margin-top: 2%;
 }
 .summary-paragraph{
     padding: 10px;
@@ -89,7 +89,6 @@
   font-weight: 500;
   line-height: 20px;
   padding: 6px 16px;
-  position: relative;
   transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   margin-bottom: 20px;
 }
@@ -119,4 +118,20 @@
 
 .classic-button:before {
   display: none;
+}
+.main-page-nav{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: #F3F4F6;
+}
+.nav-a-library{
+  text-decoration: none;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color:#24292E;
+  font-weight: bold;
+  font-size: 20px;
 }

@@ -1,7 +1,7 @@
 export function addToLibary(e) {
     if(e.target.name==="isInLibrary"){
         window.localStorage.removeItem(e.target.id)
-        e.target.innerText="add"
+        e.target.innerText="Add to Library"
         e.target.name="isntInLibrary"
     }
     else{
@@ -12,7 +12,7 @@ export function addToLibary(e) {
 
         })
         e.target.name="isInLibrary"
-        e.target.innerText="delete"
+        e.target.innerText="Remove from library"
     }
 }
 

@@ -3,7 +3,7 @@ import { addToLibary } from "./addToLibrary.js";
 const container = document.querySelector(".container-for-all-article");
 
 export const singleArticle = (singleArticle) => {
-    let items = { ...window.localStorage };
+    let articlesInStorage = { ...window.localStorage };
 
 
     let singleArticleContainer = document.createElement("div");
@@ -28,19 +28,20 @@ export const singleArticle = (singleArticle) => {
     publishedAt.classList.add("classic-paragraph");
     title.classList.add("classic-paragraph");
     newsSite.classList.add("newSite-paragraph");
+
     let isInLibrary = false
-    Object.values(items).forEach((item) => {
-        if (JSON.parse(item).id === singleArticle.id) {
+    Object.values(articlesInStorage).forEach((articlesInStorage) => {
+        if (JSON.parse(articlesInStorage).id === singleArticle.id) {
             isInLibrary = true
         }
     })
     if(isInLibrary){
         addToLibraryButton.name="isInLibrary"
-        addToLibraryButton.innerText="delete"
+        addToLibraryButton.innerText="Remove from Library"
     }
     else{
         addToLibraryButton.name="isntInLibrary"
-        addToLibraryButton.innerText="add"
+        addToLibraryButton.innerText="Add to Library"
 
     }
 

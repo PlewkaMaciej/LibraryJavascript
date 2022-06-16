@@ -5,7 +5,7 @@ export function addToLibary(e) {
         e.target.name="isntInLibrary"
     }
     else{
-        fetch('https://api.spaceflightnewsapi.net/v3/articles/' + e.target.id)
+        fetch('https://api.spaceflightnewsapi.net/v3/articles/'+e.target.id)
         .then(res => res.json())
         .then(data => {
             addToLocalStorage(data)

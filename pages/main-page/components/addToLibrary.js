@@ -22,7 +22,8 @@ const addToLocalStorage = (article) => {
             title: article.title,
             publishedAt: article.publishedAt,
             summary: article.summary,
-            newsSite:article.newsSite
+            newsSite:article.newsSite,
+            url:article.url
         }
     articleObject=JSON.stringify(articleObject)
     window.localStorage.setItem(article.id,articleObject);
